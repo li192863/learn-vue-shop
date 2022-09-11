@@ -4,7 +4,7 @@
     <div class="login_box">
       <!-- 头像区域 -->
       <div class="avatar_box">
-        <img src="../assets/logo.png" alt="">
+        <img src="../assets/login-logo.png" alt="">
       </div>
       <!-- 登录表单 -->
       <el-form :model="loginForm" :rules="loginFormRules" ref="loginFormRef" class="login_form">
@@ -39,11 +39,11 @@ export default {
       loginFormRules: {
         username: [ // 验证用户名
           { required: true, message: '请输入用户名称', trigger: 'blur' },
-          { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
+          { min: 3, max: 10, message: '长度在 3 到 10 个字符内', trigger: 'blur' }
         ],
         password: [ // 验证密码
           { required: true, message: '请输入用户密码', trigger: 'blur' },
-          { min: 6, max: 15, message: '长度在 6 到 15 个字符', trigger: 'blur' }
+          { min: 6, max: 15, message: '长度在 6 到 15 个字符内', trigger: 'blur' }
         ]
       }
     }
@@ -55,11 +55,11 @@ export default {
         // 校验未通过
         if (!valid) return
         // 发送登录请求
-        const { data: res } = await this.axios.post('login', this.loginForm)
+        const { data: res } = await this.$http.post('login', this.loginForm)
         // 状态码异常登录失败
-        if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
+        if (res.meta.status !== 200) return this.$message.error('登录失败')
         // 登录成功
-        this.$message.success(res.meta.msg)
+        this.$message.success('登录成功')
         window.sessionStorage.setItem('token', res.data.token) // 将token保存至客户端的sessionStorage中
         this.$router.push('/home') // 跳转至主页
       })

@@ -4,3 +4,25 @@ html, body, #app {
     padding: 0;
     margin: 0;
 }
+
+/* 面包屑导航区 */
+.el-breadcrumb {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* 卡片视图区 */
+.el-card {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 列表视图区 */
+.el-table {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+/* 页码区域 */
+.el-pagination {
+    margin-top: 15px;
+}
