@@ -98,7 +98,7 @@
     </el-dialog>
 
     <!-- 修改角色对话框 -->
-    <el-dialog title="修改用户" :visible.sync="updateDialogVisible" width="50%" @close="closeUpdateDialog()">
+    <el-dialog title="修改角色" :visible.sync="updateDialogVisible" width="50%" @close="closeUpdateDialog()">
       <!-- 内容主体区 -->
       <el-form :model="updateForm" :rules="updateFormRules" ref="updateFormRef" label-width="80px">
         <el-form-item label="角色名称">
