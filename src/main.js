@@ -4,6 +4,7 @@ import router from './router'
 
 import './plugins/axios.js'
 import './plugins/element.js'
+import './plugins/tree.js'
 import './assets/fonts/iconfont.css' // 导入字体图标
 import './assets/css/global.css' // 导入全局样式表
 
