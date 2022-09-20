@@ -60,8 +60,9 @@
         <el-form-item label="分类名称" prop="cat_name">
           <el-input v-model="addForm.cat_name"></el-input>
         </el-form-item>
+        <!-- 级联选择框 -->
         <el-form-item label="父级分类">
-          <el-cascader v-model="selectedKeys" :options="parentCategoryList" :props="cascaderProps" @change="handleParentCategoryChange()" clearable>
+          <el-cascader v-model="selectedKeys" :options="parentCategoryList" :props="cascaderProps" @change="handleParentCategoryChange()" clearable ref="cascader">
           </el-cascader>
         </el-form-item>
       </el-form>
@@ -199,6 +200,7 @@ export default {
     },
     // 父级分类变化触发事件
     handleParentCategoryChange() {
+      this.$refs.cascader.dropDownVisible = false // 关闭下拉菜单
       if (this.selectedKeys.length > 0) {
         this.addForm.cat_pid = this.selectedKeys[this.selectedKeys.length - 1]
         this.addForm.cat_level = this.selectedKeys.length

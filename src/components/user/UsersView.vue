@@ -13,7 +13,7 @@
       <el-row :gutter="20">
         <!-- 搜索 -->
         <el-col :span="8">
-          <el-input placeholder="请输入内容" v-model="queryInfo.query" clearable @clear="getAll()">
+          <el-input placeholder="请输入内容" v-model="queryInfo.query" clearable @clear="getAll()" @keyup.enter.native="getAll()">
             <el-button slot="append" icon="el-icon-search" @click="getAll()"></el-button>
           </el-input>
         </el-col>
