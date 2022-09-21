@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 function dateFormatFilter(originValue) {
-  const dt = new Date(originValue)
+  const dt = new Date(originValue * 1000)
 
   const year = dt.getFullYear()
   const month = (dt.getMonth() + 1 + '').padStart(2, '0')
