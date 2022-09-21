@@ -40,7 +40,7 @@
           <template slot-scope="scope">
             <!-- 修改 -->
             <el-tooltip effect="dark" content="修改" placement="top" :enterable="false">
-              <el-button type="primary" icon="el-icon-edit" size="mini" @click="showEditPage()">
+              <el-button type="primary" icon="el-icon-edit" size="mini" @click="showEditPage(scope.row.goods_id)">
               </el-button>
             </el-tooltip>
             <!-- 删除 -->
@@ -134,8 +134,8 @@ export default {
     },
 
     // 显示修改商品页面
-    showEditPage() {
-      this.$router.push('goods/edit')
+    showEditPage(id) {
+      this.$router.push({ path: 'goods/edit', query: { id: id } })
     },
 
     // 删除商品
