@@ -8,6 +8,8 @@ import RightsView from '../components/power/RightsView.vue'
 import RolesView from '../components/power/RolesView.vue'
 import CategoriesView from '../components/goods/CategoriesView.vue'
 import ParamsView from '../components/goods/ParamsView.vue'
+import GoodsView from '../components/goods/GoodsView.vue'
+import AddView from '../components/goods/AddView.vue'
 
 Vue.use(Router)
 
@@ -24,7 +26,9 @@ const routes = [
       { path: '/rights', component: RightsView },
       { path: '/roles', component: RolesView },
       { path: '/categories', component: CategoriesView },
-      { path: '/params', component: ParamsView }
+      { path: '/params', component: ParamsView },
+      { path: '/goods', component: GoodsView },
+      { path: '/goods/add', component: AddView }
     ]
   }
 ]

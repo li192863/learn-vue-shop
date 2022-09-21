@@ -1,34 +1,51 @@
 /* 全局样式表 */
-html, body, #app {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    min-width: 1000px;
+html,
+body,
+#app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  min-width: 1000px;
 }
 
 /* 面包屑导航区 */
 .el-breadcrumb {
-    font-size: 12px;
-    margin-bottom: 15px;
+  font-size: 12px;
+  margin-bottom: 15px;
 }
 
 /* 卡片视图区 */
 .el-card {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* 列表视图区 */
 .el-table {
-    font-size: 12px;
-    margin-top: 15px;
+  font-size: 12px;
+  margin-top: 15px;
 }
 
 /* 页码区域 */
 .el-pagination {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 /* 级联选择器 */
 .el-cascader-panel {
-    height: 256px;
+  height: 256px;
+}
+
+/* 步骤条 */
+.el-steps {
+  margin: 15px;
+}
+
+/* 步骤条文字 */
+.el-step__title {
+  font-size: 12px;
+}
+
+/* 文本编辑器 */
+.ql-editor {
+  min-height: 300px;
 }
