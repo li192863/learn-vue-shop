@@ -18,7 +18,7 @@ axios.interceptors.request.use(config => {
   return config // 最后必须返回config
 })
 
-// Add a response interceptor
+// 响应拦截器
 axios.interceptors.response.use(config => {
   // Do something with response data
   NProgress.done() // 关闭进度条
