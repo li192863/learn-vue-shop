@@ -173,6 +173,7 @@ export default {
           this.onlyTableData.push(attribute)
         }
       })
+      // 后端并未提供相关api
       res.data.pics = [] // 鉴于后台未给出图片下载的api，故对图片无法回显，可直接清空处理
       this.updateForm = res.data
     },
