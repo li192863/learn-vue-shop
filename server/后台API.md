@@ -465,7 +465,7 @@ type=tree
 
 - 响应数据说明
 
-  + 第一层为角色信息
+  - 第一层为角色信息
 
   - 第二层开始为权限说明，权限一共有 3 层权限
   - 最后一层权限，不包含 `children` 属性
@@ -664,7 +664,7 @@ type=tree
   | :roleId  | 角色 ID  | 不能为空`携带在url中` |
   | :rightId | 权限 ID  | 不能为空`携带在url中` |
 
-- 响应数据说明 
+- 响应数据说明
 
   - 返回的data, 是当前角色下最新的权限数据
 
@@ -1832,21 +1832,19 @@ brew install GraphicsMagick
 }
 ```
 
-
-
 ### 1.10.4. 修改地址
 
 1. [省市区/县联动效果 - 结合ElementUI的 el-cascader 组件](https://github.com/iceyangcc/provinces-china)
 
 ### 1.10.5. 查看物流信息
 
-+ 请求路径：/kuaidi/:id
+- 请求路径：/kuaidi/:id
 
-+ 请求方法：get
+- 请求方法：get
 
-+ 供测试的物流单号：1106975712662
+- 供测试的物流单号：1106975712662
 
-+ 响应数据：
+- 响应数据：
 
   ```json
   {
@@ -1916,7 +1914,6 @@ brew install GraphicsMagick
   }
   
   ```
-
 
 ## 1.11. 数据统计
 
